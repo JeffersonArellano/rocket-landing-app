@@ -1,0 +1,13 @@
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\RocketLandingApp.exe
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\RocketLandingApp.deps.json
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\RocketLandingApp.runtimeconfig.json
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\RocketLandingApp.runtimeconfig.dev.json
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\RocketLandingApp.dll
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\RocketLandingApp.pdb
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.csprojAssemblyReference.cache
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.AssemblyInfoInputs.cache
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.AssemblyInfo.cs
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.csproj.CoreCompileInputs.cache
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.dll
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.pdb
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.genruntimeconfig.cache
