@@ -1,6 +1,6 @@
-﻿using es.com.RockectApp.Enum;
+﻿using es.com.RockectLandingApp.Enum;
 using es.com.RockectApp.Interfaces;
-using es.com.RockectApp.Util;
+using es.com.RockectLandingApp.Util;
 using es.com.RockectLandingApp.Interfaces;
 using System;
 using System.Linq;
@@ -37,8 +37,8 @@ namespace es.com.RockectApp.Business
             string command = string.Empty;
 
             while (!command.Equals(Constants.Exit))
-            { 
-                  command = ConsoleHelpers.ReadConsole("Enter the action to perform, enter \"help\" for command list");
+            {
+                command = ConsoleHelpers.ReadConsole("Enter the action to perform, enter \"help\" for command list");
 
                 switch (command)
                 {
@@ -74,11 +74,29 @@ namespace es.com.RockectApp.Business
                         GetRocketList();
                         break;
 
+                    case "AskForPosition":
+                        AskForPosition();
+                        break;
                     default:
                         Console.WriteLine("Command not found");
                         break;
                 }
             }
+        }
+
+        /// <summary>
+        /// Asks for position.
+        /// </summary>
+        private void AskForPosition()
+        {
+            var landingAreaName = ConsoleHelpers.ReadConsole("Enter the landing area name");
+            var platformName = ConsoleHelpers.ReadConsole("Enter the platform name");
+            var positionX = Convert.ToDouble(ConsoleHelpers.ReadConsole("Enter the position X"));
+            var positionY = Convert.ToDouble(ConsoleHelpers.ReadConsole("Enter the position Y"));
+
+            var answer = _rocketService.AskForPosition(landingAreaName, platformName, positionX, positionY);
+
+            ConsoleHelpers.WriteLine($"The answer from control center was \"{answer}\"", "warning");
         }
 
         /// <summary>

@@ -2,19 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace es.com.RockectApp.Models
+namespace es.com.RockectLandingApp.Models
 {
     public class Position
-    {
-
-        /// <summary>
-        /// Gets or sets the owner identifier.
-        /// </summary>
-        /// <value>
-        /// The owner identifier.
-        /// </value>
-        public string OwnerId { get; set; }
-
+    {         
         /// <summary>
         /// Gets or sets the position x.
         /// </summary>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace es.com.RockectApp.Models
+namespace es.com.RockectLandingApp.Models
 {
     public class Platform
     {

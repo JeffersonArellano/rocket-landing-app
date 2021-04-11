@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace es.com.RockectApp.Util
+namespace es.com.RockectLandingApp.Util
 {
     public static class ConsoleHelpers
     {
@@ -13,6 +13,39 @@ namespace es.com.RockectApp.Util
         {
             Console.WriteLine(message);
             return Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Writes the text.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="color">The color.</param>
+        public static void WriteLine(string message, string color)
+        {
+            switch (color)
+            {
+                case "ok":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(message);
+                    Console.ResetColor();
+
+                    break;
+                case "warning":
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(message);
+                    Console.ResetColor();
+                    break;
+                case "alert":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(message);
+                    Console.ResetColor();
+                    break;
+
+                default:
+                    Console.ResetColor();
+                    Console.WriteLine(message);
+                    break;
+            }
         }
 
         /// <summary>

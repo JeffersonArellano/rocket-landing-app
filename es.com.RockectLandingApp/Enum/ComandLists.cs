@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace es.com.RockectApp.Enum
+namespace es.com.RockectLandingApp.Enum
 {
     public enum ComandLists
     {
@@ -19,21 +19,12 @@ namespace es.com.RockectApp.Enum
         CreateRocket,
         [Description("Rocket List")]
         RocketList,
-        [Description("Ask For Landing")]
-        AskForLanding,
+        [Description("Ask For Position")]
+        AskForPosition,
         [Description("Draw Landing Area")]
         DrawLandingArea,
         [Description("Draw Platform")]
         DrawPlatform
     }
-
-    public enum PositionAnswer
-    {
-        [Description("ok for landing")]
-        OkForLanding,
-        [Description("out of platform")]
-        OutOfPlatform,
-        [Description("clash")]
-        Clash
-    }
+    
 }

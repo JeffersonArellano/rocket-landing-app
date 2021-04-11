@@ -1,4 +1,4 @@
-﻿using es.com.RockectApp.Models;
+﻿using es.com.RockectLandingApp.Models;
 using es.com.RockectLandingApp.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -7,6 +7,8 @@ namespace es.com.RockectLandingApp.Business
 {
     public class PositionController : IPositionService
     {
+        private readonly List<RegisteredPosition> registeredPositions = new List<RegisteredPosition>();
+
         /// <summary>
         /// Gets the positions list.
         /// </summary>
@@ -16,7 +18,7 @@ namespace es.com.RockectLandingApp.Business
         public List<Position> GetPositionsList(double areaX, double areaY)
         {
             List<Position> positionsList = new List<Position>();
-            Position position; 
+            Position position;
 
             for (int x = 1; x <= areaX; x++)
             {
@@ -32,5 +34,24 @@ namespace es.com.RockectLandingApp.Business
             }
             return positionsList;
         }
+
+        /// <summary>
+        /// Adds the position.
+        /// </summary>
+        /// <param name="ownerId">The owner identifier.</param>
+        /// <param name="positions">The positions.</param>
+        /// <exception cref="System.NotImplementedException"></exception>
+        public void AddPosition(Guid ownerId, List<Position> positions)
+        {
+            var registeredPosition = new RegisteredPosition()
+            {
+                OwnerId = ownerId,
+                Positions= positions
+            };
+
+            registeredPositions.Add(registeredPosition);
+        }
+
+
     }
 }
