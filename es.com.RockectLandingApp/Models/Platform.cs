@@ -29,7 +29,7 @@ namespace es.com.RockectLandingApp.Models
         /// The platform identifier.
         /// </value>
         [Key]
-        public Guid PlatformId { get; set; }
+        public Guid Id { get; set; }
 
         /// <summary>
         /// Gets or sets the description.
@@ -71,6 +71,21 @@ namespace es.com.RockectLandingApp.Models
         /// </value>
         public List<Rocket> RocketList { get; set; }
 
+        /// <summary>
+        /// Gets or sets the landing area x.
+        /// </summary>
+        /// <value>
+        /// The landing area x.
+        /// </value>
+        public double  LandingAreaX { get; set; }
+
+        /// <summary>
+        /// Gets or sets the landing area y.
+        /// </summary>
+        /// <value>
+        /// The landing area y.
+        /// </value>
+        public double LandingAreaY { get; set; }
 
     }
 }

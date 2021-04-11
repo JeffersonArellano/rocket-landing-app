@@ -43,6 +43,8 @@ namespace es.com.RockectLandingApp.Business
             landingArea.AreaPositions = positionsList;
             landingAreaList.Add(landingArea);
 
+            _positionService.AddPosition(landingArea.Id, positionsList);
+
             return landingArea;
         }
 
@@ -92,6 +94,17 @@ namespace es.com.RockectLandingApp.Business
             }
 
             return board;
+        }
+
+        /// <summary>
+        /// Adds the platform.
+        /// </summary>
+        /// <param name="landingAreaId">The landing area identifier.</param>
+        /// <param name="platform">The platform.</param>
+        public void AddPlatform(Guid landingAreaId, Platform platform)
+        {
+            var landingArea = landingAreaList.FirstOrDefault(x => x.Id == landingAreaId);
+            landingArea.AvailablePlatforms.Add(platform);
         }
     }
 }

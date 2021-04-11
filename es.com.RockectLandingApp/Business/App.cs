@@ -4,6 +4,7 @@ using es.com.RockectLandingApp.Util;
 using es.com.RockectLandingApp.Interfaces;
 using System;
 using System.Linq;
+using es.com.RockectLandingApp.Models;
 
 namespace es.com.RockectApp.Business
 {
@@ -157,7 +158,7 @@ namespace es.com.RockectApp.Business
 
             if (platformList != null && platformList.Any())
             {
-                platformList.ForEach(x => Console.WriteLine($"Platform Id:{x.PlatformId} , Platform Name: {x.Description} , Area {x.AreaX * x.AreaY}m2  "));
+                platformList.ForEach(x => Console.WriteLine($"Platform Id:{x.Id} , Platform Name: {x.Description} , Area {x.AreaX * x.AreaY}m2  "));
             }
             else
             {
@@ -246,10 +247,10 @@ namespace es.com.RockectApp.Business
                 if (selectedLandingArea != null)
                 {
 
-                    var platformDescription = ConsoleHelpers.ReadConsole("Please enter the Platform description");
-                    var platformAreaX = Convert.ToDouble(ConsoleHelpers.ReadConsole("Please enter Area X"));
-                    var platformAreaY = Convert.ToDouble(ConsoleHelpers.ReadConsole("Please enter Area Y"));
-                    var platformMinRocketSpace = Convert.ToInt32(ConsoleHelpers.ReadConsole("Please enter the minimum space between rockets"));
+                    var platformDescription = ConsoleHelpers.ReadConsole("Enter the Platform description");
+                    var platformAreaX = Convert.ToDouble(ConsoleHelpers.ReadConsole("Anter Area X"));
+                    var platformAreaY = Convert.ToDouble(ConsoleHelpers.ReadConsole("Enter Area Y"));
+                    var platformMinRocketSpace = Convert.ToInt32(ConsoleHelpers.ReadConsole("Enter the minimum space between rockets"));
 
                     var platformConfirm = ConsoleHelpers.ConfirmationPrompt("Are you sure to create this platform?");
 
@@ -261,13 +262,36 @@ namespace es.com.RockectApp.Business
                         while (platformArea > zoneArea)
                         {
                             Console.WriteLine($"Invalid Platform area,  should be less than {zoneArea} m2");
-                            platformAreaX = long.Parse(ConsoleHelpers.ReadConsole("Please enter Area X"));
-                            platformAreaY = long.Parse(ConsoleHelpers.ReadConsole("Please enter Area Y"));
+                            platformAreaX = long.Parse(ConsoleHelpers.ReadConsole("Enter Area X"));
+                            platformAreaY = long.Parse(ConsoleHelpers.ReadConsole("Enter Area Y"));
 
                             platformArea = platformAreaX * platformAreaY;
                         }
 
-                        var createdPlatform = _platformService.CreateLandingPlatform(selectedLandingArea, platformDescription, platformAreaX, platformAreaY, platformMinRocketSpace);
+                        bool availablePosition = false;
+                        double landingAreaX = 0;
+                        double landingAreaY = 0;
+
+                        while (!availablePosition)
+                        {
+                            landingAreaX = Convert.ToDouble(ConsoleHelpers.ReadConsole("Enter Landing Area X coordinate for the new platform"));
+                            landingAreaY = Convert.ToDouble(ConsoleHelpers.ReadConsole("Enter Landing Area Y coordinate for the new platform"));
+
+                            var landingAreaPositions = _positionService.GetRegisteredPositions()
+                                                       .FirstOrDefault(x => x.OwnerId == selectedLandingArea.Id);
+
+                            var positionAvailability = landingAreaPositions.Positions.FirstOrDefault(x => x.PositionX == landingAreaX && x.PositionY == landingAreaY);
+                            if (positionAvailability != null)
+                            {
+                                availablePosition = positionAvailability.IsAvailable;
+                            }
+                            else
+                            {
+                                ConsoleHelpers.WriteLine("Invalid coordinate,  try again", "alert");
+                            }
+                        }
+
+                        var createdPlatform = _platformService.CreateLandingPlatform(selectedLandingArea, platformDescription, platformAreaX, platformAreaY, platformMinRocketSpace, landingAreaX, landingAreaY);
 
                         if (createdPlatform == null)
                         {

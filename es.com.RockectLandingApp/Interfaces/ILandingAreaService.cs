@@ -35,5 +35,13 @@ namespace es.com.RockectLandingApp.Interfaces
         /// <param name="landingArea">The landing area.</param>
         /// <returns></returns>
         public StringBuilder GetDrawLandingArea(LandingArea landingArea);
+
+        /// <summary>
+        /// Adds the platform.
+        /// </summary>
+        /// <param name="landingAreaId">The landing area identifier.</param>
+        /// <param name="platform">The platform.</param>
+        public void AddPlatform(Guid landingAreaId, Platform  platform);
+
     }
 }

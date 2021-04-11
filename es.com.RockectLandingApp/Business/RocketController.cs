@@ -16,18 +16,20 @@ namespace es.com.RockectLandingApp.Business
 
         private readonly ILandingAreaService _landingAreaService;
         private readonly IPlatformService _platformService;
+        private readonly IPositionService _positionService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RocketController"/> class.
         /// </summary>
         /// <param name="landingAreaService">The landing area service.</param>
         /// <param name="platformService">The platform service.</param>
-        public RocketController(ILandingAreaService landingAreaService, IPlatformService platformService)
+        public RocketController(ILandingAreaService landingAreaService, IPlatformService platformService, IPositionService positionService)
         {
             _landingAreaService = landingAreaService;
             _platformService = platformService;
+            _positionService = positionService;
         }
-         
+
         /// <summary>
         /// Asks for position.
         /// </summary>
@@ -50,8 +52,19 @@ namespace es.com.RockectLandingApp.Business
             if (platform == null)
                 return Constants.PlatformNotFound;
 
-            return Constants.OkForLanding;
+            var platformPositions = _positionService.GetAvailablePlatformPosition(platform);
+            var positionAvailable = platformPositions.FirstOrDefault(x => x.PositionX == areaX && x.PositionY == areaY);
+
+            if (positionAvailable == null)
+                return Constants.OutOfPlatform;
+
+            if (positionAvailable.IsAvailable)
+                return Constants.OkForLanding;             
+
+            return Constants.Clash;
         }
+
+
 
         /// <summary>
         /// Creates the rocket.
@@ -77,7 +90,7 @@ namespace es.com.RockectLandingApp.Business
         /// <returns> the rocket list</returns>
         public List<Rocket> RocketList()
         {
-            return this.AvailableRocketList;
+            return AvailableRocketList;
         }
     }
 }

@@ -16,6 +16,6 @@ namespace es.com.RockectLandingApp.Interfaces
         /// <param name="areaY">The area y.</param>
         /// <param name="minRocketSpace">The minimum rocket space.</param>
         /// <returns></returns>
-        public Platform CreateLandingPlatform(LandingArea landingArea, string descripcion,  double  areaX,  double  areaY,  int minRocketSpace);
+        public Platform CreateLandingPlatform(LandingArea landingArea, string descripcion,  double  areaX,  double  areaY,  int minRocketSpace, double landingAreaX, double landingAreaY);
     }
 }
