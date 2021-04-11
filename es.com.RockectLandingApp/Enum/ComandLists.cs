@@ -24,7 +24,9 @@ namespace es.com.RockectLandingApp.Enum
         [Description("Draw Landing Area")]
         DrawLandingArea,
         [Description("Draw Platform")]
-        DrawPlatform
+        DrawPlatform,
+        [Description("Request Position")]
+        RequestPosition,
     }
     
 }

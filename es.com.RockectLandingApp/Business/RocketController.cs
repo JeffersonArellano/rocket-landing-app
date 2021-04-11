@@ -64,8 +64,6 @@ namespace es.com.RockectLandingApp.Business
             return Constants.Clash;
         }
 
-
-
         /// <summary>
         /// Creates the rocket.
         /// </summary>

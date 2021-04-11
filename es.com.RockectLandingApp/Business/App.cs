@@ -85,6 +85,11 @@ namespace es.com.RockectApp.Business
             }
         }
 
+        private void RequestPosition()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Asks for position.
         /// </summary>
@@ -98,6 +103,28 @@ namespace es.com.RockectApp.Business
             var answer = _rocketService.AskForPosition(landingAreaName, platformName, positionX, positionY);
 
             ConsoleHelpers.WriteLine($"The answer from control center was \"{answer}\"", "warning");
+
+            if (answer.Equals(Constants.OkForLanding))
+            {
+                var confirm = ConsoleHelpers.ConfirmationPrompt("Request this position ? ");
+
+                if (confirm)
+                {
+                    var platform = _landingAreaService.GetPlatformsList(landingAreaName)
+                                       .FirstOrDefault(x => x.Description == platformName);
+
+                   var position = _positionService.MarkPlatformPosition(platform, positionX, positionY);
+                    if (!position.IsAvailable)
+                    {
+                        ConsoleHelpers.WriteLine($"Position requested successful", "ok");
+                    }
+                    else {
+                        ConsoleHelpers.WriteLine($"Error requesting the position ", "alert");
+                    }
+                }
+            }
+
+
         }
 
         /// <summary>
