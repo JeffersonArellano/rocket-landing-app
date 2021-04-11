@@ -12,47 +12,32 @@ namespace es.com.RockectApp.Business
     {
 
         private readonly List<LandingArea> landingAreaList = new List<LandingArea>();
-        private readonly List<Platform> platformsList = new List<Platform>();
 
         /// <summary>
         /// Creates the landing zone.
         /// </summary>
-        public LandingArea CreateLandingZone()
+        public LandingArea CreateLandingZone(string description, double areaX, double areaY)
         {
             LandingArea landingArea = new LandingArea()
             {
                 Id = Guid.NewGuid(),
-                Description = ConsoleHelpers.ReadConsole("Enter the landing zone description"),
-                AreaX = Convert.ToDouble(ConsoleHelpers.ReadConsole("Enter the Area x")),
-                AreaY = Convert.ToDouble(ConsoleHelpers.ReadConsole("Enter the Area Y")),
+                Description = description,
+                AreaX = areaX,
+                AreaY = areaY,
             };
 
-            Console.WriteLine($"You going to create the new landing zone \"{landingArea.Description}\", with a total area of \"{landingArea.AreaX * landingArea.AreaY}\" m2");
+            var positionsList = GetPositionsList(landingArea);
+            landingArea.AreaPositions = positionsList;
+            landingAreaList.Add(landingArea);
 
-            var confirm = ConsoleHelpers.ConfirmationPrompt("Are you sure to create this landing zone?");
-            if (confirm)
-            {
-                var positionsList = GetPositionsList(landingArea);
-                landingArea.AreaPositions = positionsList;
-
-                landingAreaList.Add(landingArea);
-
-                Console.WriteLine($"New Landing zone created");
-
-                return landingArea;
-            }
-            else
-            {
-                Console.WriteLine($"You discarted the changes");
-                return null;
-            }
+            return landingArea;
         }
 
         /// <summary>
         /// Landings the areas list.
         /// </summary>
         /// <returns></returns>
-        public List<LandingArea> LandingAreasList()
+        public List<LandingArea> GetLandingAreasList()
         {
             return landingAreaList;
         }
@@ -60,9 +45,9 @@ namespace es.com.RockectApp.Business
         /// <summary>
         /// Platformses the list.
         /// </summary>
+        /// <param name="langingZoneName"></param>
         /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public List<Platform> PlatformsList(string langingZoneName)
+        public List<Platform> GetPlatformsList(string langingZoneName)
         {
             return landingAreaList.Where(x => x.Description == langingZoneName)
                 .Select(x => x.AvailablePlatforms).FirstOrDefault();
@@ -98,9 +83,14 @@ namespace es.com.RockectApp.Business
             return positionsList;
         }
 
-
-        public StringBuilder DrawLandingArea(LandingArea landingArea, List<Position> positionList)
+        /// <summary>
+        /// Gets the board.
+        /// </summary>
+        /// <param name="landingArea">The landing area.</param>
+        /// <returns></returns>
+        public StringBuilder GetDrawLandingArea(LandingArea landingArea)
         {
+            List<Position> positionList = landingArea.AreaPositions;
             StringBuilder board = new StringBuilder();
             double counter = landingArea.AreaX;
 
@@ -113,7 +103,7 @@ namespace es.com.RockectApp.Business
                     var stringPositionX = item.PositionX.ToString().Length <= 1 ? $"0{item.PositionX}" : $"{item.PositionX}";
                     var stringPositionY = item.PositionY.ToString().Length <= 1 ? $"0{item.PositionY}" : $"{item.PositionY}";
 
-                    board.Append($"[{stringPositionX},{stringPositionY}]");
+                    board.Append($"|{stringPositionX},{stringPositionY}|");
                 }
                 board.Append(Environment.NewLine);
             }

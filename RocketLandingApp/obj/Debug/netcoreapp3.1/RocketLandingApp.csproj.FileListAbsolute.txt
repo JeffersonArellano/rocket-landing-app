@@ -11,8 +11,8 @@ C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\Rocke
 C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.dll
 C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.pdb
 C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.genruntimeconfig.cache
-C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\es.com.RockectApp.dll
-C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\es.com.RockectApp.pdb
 C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\obj\Debug\netcoreapp3.1\RocketLandingApp.csproj.CopyComplete
 C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\es.com.RockectLandingApp.dll
+C:\Users\jarellano\Documents\Learning\RocketLandingApp\SlnRocketLandingApp\RocketLandingApp\bin\Debug\netcoreapp3.1\es.com.RockectLandingApp.pdb

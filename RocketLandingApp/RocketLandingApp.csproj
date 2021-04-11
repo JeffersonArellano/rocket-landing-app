@@ -10,7 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\com.RockectApp\es.com.RockectApp.csproj" />
+    <ProjectReference Include="..\com.RockectApp\es.com.RockectLandingApp.csproj" />
+    <ProjectReference Include="..\es.com.RockectLandingApp\es.com.RockectLandingApp.csproj" />
   </ItemGroup>
 
 </Project>

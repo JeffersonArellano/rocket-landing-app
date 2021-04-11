@@ -23,14 +23,14 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "es.com.RockectApp/1.0.0": {
+      "es.com.RockectLandingApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "compile": {
-          "bin/placeholder/es.com.RockectApp.dll": {}
+          "bin/placeholder/es.com.RockectLandingApp.dll": {}
         },
         "runtime": {
-          "bin/placeholder/es.com.RockectApp.dll": {}
+          "bin/placeholder/es.com.RockectLandingApp.dll": {}
         }
       }
     }
@@ -80,16 +80,16 @@
         "version.txt"
       ]
     },
-    "es.com.RockectApp/1.0.0": {
+    "es.com.RockectLandingApp/1.0.0": {
       "type": "project",
-      "path": "../com.RockectApp/es.com.RockectApp.csproj",
-      "msbuildProject": "../com.RockectApp/es.com.RockectApp.csproj"
+      "path": "../es.com.RockectLandingApp/es.com.RockectLandingApp.csproj",
+      "msbuildProject": "../es.com.RockectLandingApp/es.com.RockectLandingApp.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.Extensions.DependencyInjection >= 5.0.1",
-      "es.com.RockectApp >= 1.0.0"
+      "es.com.RockectLandingApp >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -130,8 +130,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\com.RockectApp\\es.com.RockectApp.csproj": {
-              "projectPath": "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\com.RockectApp\\es.com.RockectApp.csproj"
+            "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\com.RockectApp\\es.com.RockectLandingApp.csproj": {
+              "projectPath": "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\com.RockectApp\\es.com.RockectLandingApp.csproj"
+            },
+            "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\es.com.RockectLandingApp\\es.com.RockectLandingApp.csproj": {
+              "projectPath": "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\es.com.RockectLandingApp\\es.com.RockectLandingApp.csproj"
             }
           }
         }

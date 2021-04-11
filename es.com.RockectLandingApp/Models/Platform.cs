@@ -45,7 +45,7 @@ namespace es.com.RockectApp.Models
         /// <value>
         /// The area x.
         /// </value>
-        public float AreaX { get; set; }
+        public double AreaX { get; set; }
 
         /// <summary>
         /// Gets or sets the area y.
@@ -53,7 +53,7 @@ namespace es.com.RockectApp.Models
         /// <value>
         /// The area y.
         /// </value>
-        public float AreaY { get; set; }
+        public double AreaY { get; set; }
 
         /// <summary>
         /// Gets or sets the minimum rockets space.

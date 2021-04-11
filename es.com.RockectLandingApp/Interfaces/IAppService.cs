@@ -4,11 +4,11 @@ using System.Text;
 
 namespace es.com.RockectApp.Interfaces
 {
-    interface IAppService
+    public interface IAppService
     {
         /// <summary>
         /// Initializes the application.
         /// </summary>
-        public void InitApp();
+        public void InitApp(); 
     }
 }

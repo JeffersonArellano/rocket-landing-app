@@ -7,10 +7,10 @@ namespace es.com.RockectApp.Enum
 {
     public enum ComandLists
     {
-        [Description("Create Landing Zone")]
-        CreateLandingZone,
-        [Description("Landing Zone List")]
-        LandingZoneList,
+        [Description("Create Landing Area")]
+        CreateLandingArea,
+        [Description("Landing Area List")]
+        LandingAreaList,
         [Description("Create Platform")]
         CreatePlatform,
         [Description("Platform List")]
