@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace es.com.RockectApp.Interfaces
+namespace es.com.RockectLandingApp.Interfaces
 {
     public interface ILandingAreaService
     {

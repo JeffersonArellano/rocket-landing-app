@@ -1,11 +1,9 @@
-﻿using es.com.RockectApp.Interfaces;
-using es.com.RockectApp.Models;
-using es.com.RockectApp.Util;
+﻿using es.com.RockectApp.Models;
+using es.com.RockectLandingApp.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace es.com.RockectApp.Business
+namespace es.com.RockectLandingApp.Business
 {
     public class RocketController : IRocketService
     {

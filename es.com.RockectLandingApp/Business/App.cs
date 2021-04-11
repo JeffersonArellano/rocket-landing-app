@@ -1,11 +1,9 @@
 ﻿using es.com.RockectApp.Enum;
 using es.com.RockectApp.Interfaces;
-using es.com.RockectApp.Models;
 using es.com.RockectApp.Util;
+using es.com.RockectLandingApp.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace es.com.RockectApp.Business
 {
@@ -16,6 +14,7 @@ namespace es.com.RockectApp.Business
         private readonly ILandingAreaService _landingAreaService;
         private readonly IPlatformService _platformService;
         private readonly IRocketService _rocketService;
+        private readonly IPositionService _positionService;
 
         #endregion
 
@@ -25,19 +24,22 @@ namespace es.com.RockectApp.Business
         /// <param name="landingAreaService">The landing area service.</param>
         /// <param name="platformService">The platform service.</param>
         /// <param name="rocketService">The rocket service.</param>
-        public App(ILandingAreaService landingAreaService, IPlatformService platformService, IRocketService rocketService)
+        public App(ILandingAreaService landingAreaService, IPlatformService platformService, IRocketService rocketService, IPositionService positionService)
         {
             _landingAreaService = landingAreaService;
             _platformService = platformService;
             _rocketService = rocketService;
+            _positionService = positionService;
         }
 
         public void InitApp()
         {
-            string command = ConsoleHelpers.ReadConsole("Enter the action to perform, enter \"help\" for command list");
+            string command = string.Empty;
 
             while (!command.Equals(Constants.Exit))
-            {
+            { 
+                  command = ConsoleHelpers.ReadConsole("Enter the action to perform, enter \"help\" for command list");
+
                 switch (command)
                 {
                     case "help":

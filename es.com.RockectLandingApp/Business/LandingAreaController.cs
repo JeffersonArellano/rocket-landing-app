@@ -1,17 +1,28 @@
-﻿using es.com.RockectApp.Interfaces;
-using es.com.RockectApp.Models;
-using es.com.RockectApp.Util;
+﻿using es.com.RockectApp.Models;
+using es.com.RockectLandingApp.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace es.com.RockectApp.Business
+namespace es.com.RockectLandingApp.Business
 {
     public class LandingAreaController : ILandingAreaService
     {
 
         private readonly List<LandingArea> landingAreaList = new List<LandingArea>();
+
+        private readonly IPositionService _positionService;
+
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LandingAreaController"/> class.
+        /// </summary>
+        /// <param name="positionService">The position service.</param>
+        public LandingAreaController(IPositionService positionService)
+        {
+            _positionService = positionService;
+        }
 
         /// <summary>
         /// Creates the landing zone.
@@ -24,9 +35,11 @@ namespace es.com.RockectApp.Business
                 Description = description,
                 AreaX = areaX,
                 AreaY = areaY,
+                fieldsX = Math.Sqrt(areaX),
+                fieldsY = Math.Sqrt(areaY)
             };
 
-            var positionsList = GetPositionsList(landingArea);
+            var positionsList = _positionService.GetPositionsList(landingArea.AreaX, landingArea.AreaY);
             landingArea.AreaPositions = positionsList;
             landingAreaList.Add(landingArea);
 
@@ -51,36 +64,6 @@ namespace es.com.RockectApp.Business
         {
             return landingAreaList.Where(x => x.Description == langingZoneName)
                 .Select(x => x.AvailablePlatforms).FirstOrDefault();
-        }
-
-        /// <summary>
-        /// Gets the positions list.
-        /// </summary>
-        /// <param name="landingArea">The landing area.</param>
-        /// <returns></returns>
-        private List<Position> GetPositionsList(LandingArea landingArea)
-        {
-            List<Position> positionsList;
-            Position position;
-
-            landingArea.fieldsX = Math.Sqrt(landingArea.AreaX);
-            landingArea.fieldsY = Math.Sqrt(landingArea.AreaY);
-            positionsList = new List<Position>();
-
-            for (int x = 1; x <= landingArea.AreaX; x++)
-            {
-                for (int y = 1; y <= landingArea.AreaY; y++)
-                {
-                    position = new Position()
-                    {
-                        PositionX = x,
-                        PositionY = y
-                    };
-                    positionsList.Add(position);
-                }
-            }
-
-            return positionsList;
         }
 
         /// <summary>
