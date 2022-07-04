@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace es.com.RockectLandingApp.Models
 {
@@ -30,7 +28,7 @@ namespace es.com.RockectLandingApp.Models
         /// <value>
         ///   <c>true</c> if this instance is landed; otherwise, <c>false</c>.
         /// </value>
-        public bool  IsLanded { get; set; }
+        public bool IsLanded { get; set; }
 
         /// <summary>
         /// Gets or sets the position identifier.

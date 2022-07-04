@@ -14,7 +14,7 @@ namespace es.com.RockectLandingApp.Interfaces
         /// <param name="areaX">The area x.</param>
         /// <param name="areaY">The area y.</param>
         /// <returns></returns>
-        public LandingArea CreateLandingZone(string description,  double  areaX, double  areaY);
+        public LandingArea CreateLandingZone(string description, double areaX, double areaY);
 
         /// <summary>
         /// Gets the landing areas list.
@@ -41,7 +41,7 @@ namespace es.com.RockectLandingApp.Interfaces
         /// </summary>
         /// <param name="landingAreaId">The landing area identifier.</param>
         /// <param name="platform">The platform.</param>
-        public void AddPlatform(Guid landingAreaId, Platform  platform);
+        public void AddPlatform(Guid landingAreaId, Platform platform);
 
     }
 }

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "W/pcJsdguFbuxluu/rutLTawkwajwQ5SQlP6NFuG3MChX2UmxNBq9pBxHMmEXvX4sIiXkKTcRaN3PXhy569lwA==",
+  "dgSpecHash": "T3OuMAE5mBiZIZaeWYu81WU+bQPi5SeAG6C74963MxV/YfdninN9hJIdZtdPkhcCpNuwaFT6s0xTwFsOdHO3Eg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\RocketLandingApp\\RocketLandingApp.csproj",
+  "projectFilePath": "A:\\PersonalProjects\\rocket-landing\\RocketLandingApp\\RocketLandingApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jarellano\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
-    "C:\\Users\\jarellano\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+    "C:\\Users\\Jefferson.Arellano\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
+    "C:\\Users\\Jefferson.Arellano\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -77,7 +77,7 @@ namespace es.com.RockectLandingApp.Models
         /// <value>
         /// The landing area x.
         /// </value>
-        public double  LandingAreaX { get; set; }
+        public double LandingAreaX { get; set; }
 
         /// <summary>
         /// Gets or sets the landing area y.

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace es.com.RockectLandingApp.Models
 {
@@ -29,7 +28,7 @@ namespace es.com.RockectLandingApp.Models
         /// <value>
         /// The description.
         /// </value>
-        public string Description  { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
         /// Gets or sets the area x.
@@ -45,7 +44,7 @@ namespace es.com.RockectLandingApp.Models
         /// <value>
         /// The area y.
         /// </value>
-        public double  AreaY { get; set; }
+        public double AreaY { get; set; }
 
         /// <summary>
         /// Gets or sets the fields x.
@@ -69,7 +68,7 @@ namespace es.com.RockectLandingApp.Models
         /// <value>
         /// The available platforms.
         /// </value>
-        public List<Platform> AvailablePlatforms { get; set ; }
+        public List<Platform> AvailablePlatforms { get; set; }
 
         /// <summary>
         /// Gets or sets the area positions.

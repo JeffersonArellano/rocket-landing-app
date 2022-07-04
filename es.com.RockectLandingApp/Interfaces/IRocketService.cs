@@ -1,7 +1,5 @@
 ﻿using es.com.RockectLandingApp.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace es.com.RockectLandingApp.Interfaces
 {
@@ -28,6 +26,6 @@ namespace es.com.RockectLandingApp.Interfaces
         /// <param name="areaX">The area x.</param>
         /// <param name="areaY">The area y.</param>
         /// <returns></returns>
-        public string AskForPosition(string  landingAreaName,  string  platformName, double areaX, double areaY);
+        public string AskForPosition(string landingAreaName, string platformName, double areaX, double areaY);
     }
 }

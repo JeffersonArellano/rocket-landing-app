@@ -1,7 +1,4 @@
 ﻿using es.com.RockectLandingApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace es.com.RockectLandingApp.Interfaces
 {
@@ -16,6 +13,6 @@ namespace es.com.RockectLandingApp.Interfaces
         /// <param name="areaY">The area y.</param>
         /// <param name="minRocketSpace">The minimum rocket space.</param>
         /// <returns></returns>
-        public Platform CreateLandingPlatform(LandingArea landingArea, string descripcion,  double  areaX,  double  areaY,  int minRocketSpace, double landingAreaX, double landingAreaY);
+        public Platform CreateLandingPlatform(LandingArea landingArea, string descripcion, double areaX, double areaY, int minRocketSpace, double landingAreaX, double landingAreaY);
     }
 }

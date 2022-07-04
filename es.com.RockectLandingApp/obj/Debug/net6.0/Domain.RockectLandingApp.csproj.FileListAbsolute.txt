@@ -1,0 +1,11 @@
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\bin\Debug\net6.0\Domain.RockectLandingApp.deps.json
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\bin\Debug\net6.0\Domain.RockectLandingApp.dll
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\bin\Debug\net6.0\ref\Domain.RockectLandingApp.dll
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\bin\Debug\net6.0\Domain.RockectLandingApp.pdb
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\obj\Debug\net6.0\Domain.RockectLandingApp.GeneratedMSBuildEditorConfig.editorconfig
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\obj\Debug\net6.0\Domain.RockectLandingApp.AssemblyInfoInputs.cache
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\obj\Debug\net6.0\Domain.RockectLandingApp.AssemblyInfo.cs
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\obj\Debug\net6.0\Domain.RockectLandingApp.csproj.CoreCompileInputs.cache
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\obj\Debug\net6.0\Domain.RockectLandingApp.dll
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\obj\Debug\net6.0\ref\Domain.RockectLandingApp.dll
+A:\PersonalProjects\rocket-landing\es.com.RockectLandingApp\obj\Debug\net6.0\Domain.RockectLandingApp.pdb

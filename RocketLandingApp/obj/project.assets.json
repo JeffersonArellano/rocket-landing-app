@@ -1,17 +1,17 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
+    "net6.0": {
       "Microsoft.Extensions.DependencyInjection/5.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
@@ -23,14 +23,14 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "es.com.RockectLandingApp/1.0.0": {
+      "Domain.RockectLandingApp/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/es.com.RockectLandingApp.dll": {}
+          "bin/placeholder/Domain.RockectLandingApp.dll": {}
         },
         "runtime": {
-          "bin/placeholder/es.com.RockectLandingApp.dll": {}
+          "bin/placeholder/Domain.RockectLandingApp.dll": {}
         }
       }
     }
@@ -80,61 +80,55 @@
         "version.txt"
       ]
     },
-    "es.com.RockectLandingApp/1.0.0": {
+    "Domain.RockectLandingApp/1.0.0": {
       "type": "project",
-      "path": "../es.com.RockectLandingApp/es.com.RockectLandingApp.csproj",
-      "msbuildProject": "../es.com.RockectLandingApp/es.com.RockectLandingApp.csproj"
+      "path": "../es.com.RockectLandingApp/Domain.RockectLandingApp.csproj",
+      "msbuildProject": "../es.com.RockectLandingApp/Domain.RockectLandingApp.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "Microsoft.Extensions.DependencyInjection >= 5.0.1",
-      "es.com.RockectLandingApp >= 1.0.0"
+    "net6.0": [
+      "Domain.RockectLandingApp >= 1.0.0",
+      "Microsoft.Extensions.DependencyInjection >= 5.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jarellano\\.nuget\\packages\\": {},
+    "C:\\Users\\Jefferson.Arellano\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\RocketLandingApp\\RocketLandingApp.csproj",
+      "projectUniqueName": "A:\\PersonalProjects\\rocket-landing\\RocketLandingApp\\RocketLandingApp.csproj",
       "projectName": "RocketLandingApp",
-      "projectPath": "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\RocketLandingApp\\RocketLandingApp.csproj",
-      "packagesPath": "C:\\Users\\jarellano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\RocketLandingApp\\obj\\",
+      "projectPath": "A:\\PersonalProjects\\rocket-landing\\RocketLandingApp\\RocketLandingApp.csproj",
+      "packagesPath": "C:\\Users\\Jefferson.Arellano\\.nuget\\packages\\",
+      "outputPath": "A:\\PersonalProjects\\rocket-landing\\RocketLandingApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jarellano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jefferson.Arellano\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/agency-commerce/_packaging/Default/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\com.RockectApp\\es.com.RockectLandingApp.csproj": {
-              "projectPath": "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\com.RockectApp\\es.com.RockectLandingApp.csproj"
-            },
-            "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\es.com.RockectLandingApp\\es.com.RockectLandingApp.csproj": {
-              "projectPath": "C:\\Users\\jarellano\\Documents\\Learning\\RocketLandingApp\\SlnRocketLandingApp\\es.com.RockectLandingApp\\es.com.RockectLandingApp.csproj"
+            "A:\\PersonalProjects\\rocket-landing\\es.com.RockectLandingApp\\Domain.RockectLandingApp.csproj": {
+              "projectPath": "A:\\PersonalProjects\\rocket-landing\\es.com.RockectLandingApp\\Domain.RockectLandingApp.csproj"
             }
           }
         }
@@ -146,8 +140,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
@@ -169,7 +163,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

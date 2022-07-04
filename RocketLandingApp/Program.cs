@@ -1,19 +1,19 @@
-﻿using es.com.RockectApp.Business;
-using es.com.RockectLandingApp.Business;
+﻿using es.com.RockectApp.Services;
 using es.com.RockectLandingApp.Interfaces;
+using es.com.RockectLandingApp.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace RocketLandingApp
 {
     static class Program
-    {   
+    {
         static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-                .AddSingleton<ILandingAreaService, LandingAreaController>()
-                .AddSingleton<IPlatformService, PlatformController>()
-                .AddSingleton<IRocketService, RocketController>()
-                .AddSingleton<IPositionService, PositionController>()
+                .AddSingleton<ILandingAreaService, LandingAreaService>()
+                .AddSingleton<IPlatformService, PlatformService>()
+                .AddSingleton<IRocketService, RocketService>()
+                .AddSingleton<IPositionService, PositionService>()
                 .BuildServiceProvider();
 
 
@@ -24,6 +24,6 @@ namespace RocketLandingApp
 
             App app = new App(landingAreaService, platformService, rocketService, positionService);
             app.InitApp();
-        }       
+        }
     }
 }

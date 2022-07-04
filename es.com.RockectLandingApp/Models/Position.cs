@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace es.com.RockectLandingApp.Models
+﻿namespace es.com.RockectLandingApp.Models
 {
     public class Position
-    {         
+    {
         /// <summary>
         /// Gets or sets the position x.
         /// </summary>
